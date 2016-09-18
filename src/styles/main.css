@@ -96,8 +96,8 @@ height: 20px;
     list-style-type: none;
     margin: 0;
     padding: 5px;
-    height: 400px;
-    overflow: scroll;
+    height: calc(100% - 280px);
+    overflow-y: auto;
   }
   .dashboard-data-list ul li{
       margin: 0;
@@ -113,3 +113,9 @@ height: 20px;
   .btn{
       padding: 1px 5px;
   }
+  .data-section{
+      border-right:1px solid #f2f2f2;
+  }
+.data-list-numbers li{
+    display: inline-block;
+}

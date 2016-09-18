@@ -40,213 +40,51 @@
                         </h3>
                     </div>
                     <div class="col-md-5">
-                        <h4 class="text-right">
+                        <h4 class="text-right" style="margin-top:20px">
                             Explore.. Create.. Share..
                         </h4>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-2">
-                        <h4>
-                            Data Selection Level
-                        </h4>
-                    </div>
-                    <div class="col-md-10">
-                        <div class="btn-group" role="group" aria-label="...">
-                            <button type="button" class="btn btn-primary active">District</button>
-                            <button type="button" class="btn btn-primary">Mandal</button>
+                <div class="col-md-2" style="margin-top:10px">
+                    <h4>
+                        Data Selection Level
+                    </h4>
+                </div>
+                <div class="col-md-10" style="margin: 17px 0;">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="btn-group" role="group" aria-label="...">
+                                <button type="button" class="btn btn-primary active">District</button>
+                                <button type="button" class="btn btn-primary">Mandal</button>
+                            </div>
+                        </div>
+                        <div class="col-md-6" style="text-align:right">
+                            <button type="button" class="btn btn-default">Clear All Selectors</button>
+                            <button type="button" class="btn btn-default">Export to Excel</button>
                         </div>
                     </div>
+                </div>
             </div>
 
             <div class="row">
-                <div class="col-md-2" class="data-section-list">
-                    <h4>
-                        Sector
-                    </h4>
-                    <div class="data-options">
-                        <div class="has-feedback options-list">
-                            <div class="btn-group" role="group" aria-label="...">
-                                <button type="button" class="btn btn-default"><i class="fa fa-check-square-o" aria-hidden="true"></i></button>
-                                <button type="button" class="btn btn-default"><i class="fa fa-close" aria-hidden="true"></i></button>
-                                <button type="button" class="btn btn-default"><i class="fa fa-sort-alpha-asc" aria-hidden="true"></i></button>
-                            </div>
-                        </div>
-                        <div id="the-basics" class="search-bar">
-                            <input class="form-control typeahead input-sm" />
-                        </div>
-                        <div class="options-list">
-                            <span class="btn btn-default form-search-icon"><i class="fa fa-search"></i></span>
-                        </div>
-                        <div style="clear:both"></div>
-                    </div>
-                    <div class="data-pagination">
-                        <ul>
-                            <li ng-repeat="page in dashBoardCtrl.alPhaPaging track by $index"><a href="#">{{page}}</a></li>
-                        </ul>
-                    </div>
-                    <div class="dashboard-data-list">
-                        <ul>
-                            <li ng-repeat="item in dashBoardCtrl.sectors track by $index">
-                                <i class="fa fa-info-circle"></i>
-                                <input type="checkbox" /> {{item}}
-                            </li>
-                        </ul>
-
-                    </div>
+                <div class="col-md-2 data-section">
+                    <app-list paging-type="string" data-source="dashBoardCtrl.sectors" title="Sector"></app-list>
                 </div>
-                <div class="col-md-2" class="data-section">
-                    <h4>
-                        Book Name
-                    </h4>
-                    <div class="data-options">
-                        <div class="has-feedback options-list">
-                            <div class="btn-group" role="group" aria-label="...">
-                                <button type="button" class="btn btn-default"><i class="fa fa-check-square-o" aria-hidden="true"></i></button>
-                                <button type="button" class="btn btn-default"><i class="fa fa-close" aria-hidden="true"></i></button>
-                                <button type="button" class="btn btn-default"><i class="fa fa-sort-alpha-asc" aria-hidden="true"></i></button>
-                            </div>
-                        </div>
-                        <div id="the-basics" class="search-bar">
-                            <input class="form-control typeahead input-sm" />
-                        </div>
-                        <div class="options-list">
-                            <span class="btn btn-default form-search-icon"><i class="fa fa-search"></i></span>
-                        </div>
-                        <div style="clear:both"></div>
-                    </div>
-                    <div class="data-pagination">
-                        <ul>
-                            <li ng-repeat="page in dashBoardCtrl.alPhaPaging track by $index"><a href="#">{{page}}</a></li>
-                        </ul>
-                    </div>
-                    <div class="dashboard-data-list">
-                        <ul>
-                            <li ng-repeat="item in dashBoardCtrl.bookNames track by $index">
-                                <i class="fa fa-info-circle"></i>
-                                <input type="checkbox" /> {{item}}
-                            </li>
-                        </ul>
-                    </div>
+                <div class="col-md-2 data-section">
+                    <app-list paging-type="string" data-source="dashBoardCtrl.bookNames" title="Book Name"></app-list>
                 </div>
 
-                <div class="col-md-2" class="data-section">
-                    <h4>
-                        Year
-                    </h4>
-                    <div class="data-options">
-                        <div class="has-feedback options-list">
-                            <div class="btn-group" role="group" aria-label="...">
-                                <button type="button" class="btn btn-default"><i class="fa fa-check-square-o" aria-hidden="true"></i></button>
-                                <button type="button" class="btn btn-default"><i class="fa fa-close" aria-hidden="true"></i></button>
-                                <button type="button" class="btn btn-default"><i class="fa fa-sort-alpha-asc" aria-hidden="true"></i></button>
-                            </div>
-                        </div>
-                        <div id="the-basics" class="search-bar">
-                            <input class="form-control typeahead input-sm" />
-                        </div>
-                        <div class="options-list">
-                            <span class="btn btn-default form-search-icon"><i class="fa fa-search"></i></span>
-                        </div>
-                        <div style="clear:both"></div>
-                    </div>
-                    <div class="data-pagination">
-                        <ul>
-                            <li>View Recent Values</li>
-                            <li><a href="#">5</a></li>
-                            <li><a href="#">10</a></li>
-                            <li><a href="#">15</a></li>
-                            <li><a href="#">20</a></li>
-                            <li><a href="#">25</a></li>
-                            <li><a href="#">50</a></li>
-                        </ul>
-                    </div>
-                    <div class="dashboard-data-list years">
-                        <ul>
-                            <li ng-repeat="item in dashBoardCtrl.years track by $index">
-                                <input type="checkbox" /> {{item}}
-                            </li>
-                        </ul>
-                    </div>
+                <div class="col-md-2 data-section">
+                   <app-list paging-type="string" data-source="dashBoardCtrl.years" type="num" title="Year"></app-list>
                 </div>
-                <div class="col-md-3" class="data-section">
-                    <h4>
-                        Contents
-                    </h4>
-                    <div class="data-options">
-                        <div class="has-feedback options-list">
-                            <div class="btn-group" role="group" aria-label="...">
-                                <button type="button" class="btn btn-default"><i class="fa fa-check-square-o" aria-hidden="true"></i></button>
-                                <button type="button" class="btn btn-default"><i class="fa fa-close" aria-hidden="true"></i></button>
-                                <button type="button" class="btn btn-default"><i class="fa fa-sort-alpha-asc" aria-hidden="true"></i></button>
-                            </div>
-                        </div>
-                        <div id="the-basics" class="search-bar">
-                            <input class="form-control typeahead input-sm" />
-                        </div>
-                        <div class="options-list">
-                            <span class="btn btn-default form-search-icon"><i class="fa fa-search"></i></span>
-                        </div>
-                        <div style="clear:both"></div>
-                    </div>
-                    <div class="data-pagination">
-                        <ul>
-                            <li ng-repeat="page in dashBoardCtrl.alPhaPaging track by $index"><a href="#">{{page}}</a></li>
-                        </ul>
-                    </div>
-                    <div class="dashboard-data-list">
-                        <ul>
-                            <li ng-repeat="item in dashBoardCtrl.contents track by $index">
-                                <i class="fa fa-info-circle"></i>
-                                <input type="checkbox" /> {{item}}
-                            </li>
-                        </ul>
-                    </div>
+                <div class="col-md-3 data-section">
+                    <app-list paging-type="string" data-source="dashBoardCtrl.contents" title="Contents"></app-list>
+
                 </div>
-                <div class="col-md-3">
-                    <h4>
-                        Indicators
-                    </h4>
-                    <div class="data-options">
-                        <div class="has-feedback options-list">
-                            <div class="btn-group" role="group" aria-label="...">
-                                <button type="button" class="btn btn-default"><i class="fa fa-check-square-o" aria-hidden="true"></i></button>
-                                <button type="button" class="btn btn-default"><i class="fa fa-close" aria-hidden="true"></i></button>
-                                <button type="button" class="btn btn-default"><i class="fa fa-sort-alpha-asc" aria-hidden="true"></i></button>
-                            </div>
-                        </div>
-                        <div id="the-basics" class="search-bar">
-                            <input class="form-control typeahead input-sm" />
-                        </div>
-                        <div class="options-list">
-                            <span class="btn btn-default form-search-icon"><i class="fa fa-search"></i></span>
-                        </div>
-                        <div style="clear:both"></div>
-                    </div>
-                    <div class="data-pagination">
-                        <ul>
-                            <li ng-repeat="page in dashBoardCtrl.alPhaPaging track by $index"><a href="#">{{page}}</a></li>
-                        </ul>
-                    </div>
-                    <div class="dashboard-data-list">
-                        <ul>
-                            <li ng-repeat="item in dashBoardCtrl.indicators track by $index">
-                                <i class="fa fa-info-circle"></i>
-                                <input type="checkbox" /> {{item}}
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <button type="button" class="btn btn-default">Help & Feedback</button>
-                    <button type="button" class="btn btn-default">Select All Indicators</button>
-                </div>
-                <div class="col-md-8">
-                    <button type="button" class="btn btn-default">Clear All Selectors</button>
-                    <button type="button" class="btn btn-default">Export to Excel</button>
+                <div class="col-md-3 data-section">
+                    <app-list paging-type="string" data-source="dashBoardCtrl.indicators" title="Indicators"></app-list>
                 </div>
             </div>
         </div>

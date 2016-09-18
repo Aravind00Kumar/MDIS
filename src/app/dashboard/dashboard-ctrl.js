@@ -1,18 +1,35 @@
 
 (function () {
+
+
+
+    function Record(name, isSelected) {
+        this.name = name;
+        this.isSelected = isSelected || false;
+    }
+
     'use strict'
     angular.module('app')
         .controller('DashBoardController', [function () {
             var vm = this;
 
             function init(vm) {
-                vm.title = 'Office';
-                vm.alPhaPaging = ['A', ' B', ' C', ' D', ' E', ' F', ' G', ' H', ' I', ' J', ' K', ' L', ' M', 'N', ' O', ' P', ' Q', ' R', ' S', ' T', ' U', ' V', ' W', ' X', ' Y', ' Z']
-                vm.sectors = ['abc', 'xyz', 'ijk', 'abc', 'xyz', 'ijk', 'abc', 'xyz'];
-                vm.bookNames = ['abc', 'xyz', 'ijk', 'abc', 'xyz', 'ijk', 'abc', 'xyz'];
-                vm.years = ['1900', '1901', '2000'];
-                vm.contents = ['abc', 'xyz', 'ijk', 'abc', 'xyz', 'ijk', 'abc', 'xyz'];
-                vm.indicators = ['abc', 'xyz', 'ijk', 'abc', 'xyz', 'ijk', 'abc', 'xyz'];
+
+                vm.years = [
+                    new Record(1900), new Record(2001), new Record(1987), new Record(1984), new Record(2015), new Record(2012), new Record(2002), new Record(1950)];
+
+                vm.sectors = [
+                    new Record('abc'), new Record('xyz'), new Record('ijk'), new Record('abc'), new Record('xyz'), new Record('ijk'), new Record('abc'), new Record('xyz')];
+
+                vm.bookNames = [
+                    new Record('abc'), new Record('xyz'), new Record('ijk'), new Record('abc'), new Record('xyz'), new Record('ijk'), new Record('abc'), new Record('xyz')];
+
+                vm.contents = [
+                    new Record('abc'), new Record('xyz'), new Record('ijk'), new Record('abc'), new Record('xyz'), new Record('ijk'), new Record('abc'), new Record('xyz')];
+
+                vm.indicators = [
+                    new Record('abc'), new Record('xyz'), new Record('ijk'), new Record('abc'), new Record('xyz'), new Record('ijk'), new Record('abc'), new Record('xyz')];
+
             }
 
 

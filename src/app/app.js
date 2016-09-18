@@ -50,8 +50,12 @@
 
             $urlRouterProvider.otherwise("/home");
         }])
-
-                .controller('HelpController', [function () {
+        .filter('reverse', function () {
+            return function (items) {
+                return items.slice().reverse();
+            };
+        })
+        .controller('HelpController', [function () {
             var vm = this;
             this.title = 'Help';
         }])

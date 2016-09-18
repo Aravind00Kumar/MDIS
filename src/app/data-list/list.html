@@ -1,0 +1,40 @@
+<section>
+    <h4>
+        {{listCtrl.title}}
+    </h4>
+    <div class="data-options">
+        <div class="has-feedback options-list">
+            <div class="btn-group" role="group" aria-label="...">
+                <button type="button" ng-click="listCtrl.toggleSelection()" class="btn btn-default"><i class="fa" ng-class="listCtrl.selectAll" aria-hidden="true"></i></button>
+                <button type="button" ng-click="listCtrl.reset()" class="btn btn-default"><i class="fa fa-close" aria-hidden="true"></i></button>
+                <button type="button" ng-click="listCtrl.sort()" class="btn btn-default"><i class="fa" ng-class="listCtrl.sortOrder" aria-hidden="true"></i></button>
+            </div>
+        </div>
+        <!--<div id="{{listCtrl.title.replace(' ','')}}" class="search-bar">-->
+        <div id="Sector" class="search-bar">
+            <input class="form-control typeahead input-sm" ng-model="listCtrl.query" ng-keyup="listCtrl.search($event)" placeholder="Search..."
+            />
+        </div>
+        <div class="options-list">
+            <span class="btn btn-default form-search-icon"><i class="fa fa-search"></i></span>
+        </div>
+        <div style="clear:both"></div>
+    </div>
+    <div class="data-pagination">
+        <ul ng-if="listCtrl.type !== 'num' ">
+            <li ng-repeat="page in listCtrl.alPhaPaging track by $index"><a href="#" ng-click="listCtrl.filter(page)">{{page}}</a></li>
+        </ul>
+        <ul ng-if="listCtrl.type === 'num' ">
+            <li>View Recent</li>
+            <li ng-repeat="page in listCtrl.numbers track by $index"><a href="#" ng-click="listCtrl.filterByNumbers(page)">{{page}}</a></li>
+        </ul>
+    </div>
+    <div class="dashboard-data-list">
+        <ul ng-class="{'data-list-numbers': listCtrl.type === 'num'}">
+            <li ng-repeat="item in listCtrl.source track by $index">
+                <i ng-if="listCtrl.type !== 'num' " class="fa fa-info-circle"></i>
+                <input type="checkbox" ng-model="item.isSelected" /> {{item.name}}
+            </li>
+        </ul>
+    </div>
+</section>
