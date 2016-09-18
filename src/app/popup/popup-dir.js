@@ -8,9 +8,10 @@
                 templateUrl: './app/popup/popup.html',
                 bindToController: {
                     source: '=?',
+                    title: '=?',
                 },
                 scope: true,
-                controller: ['$scope', function ($scope) {
+                controller: ['$scope', 'dashboardService', function ($scope, dashboardService) {
                     var vm = this;
 
                     function init(vm) {
@@ -29,6 +30,10 @@
                                     vm.mainSource = vm.source.slice();
                             }
                         );
+                    }
+
+                    this.select = function () {
+                        dashboardService.set(vm.title, vm.source);
                     }
 
                     activate(vm);

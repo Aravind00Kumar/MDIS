@@ -119,3 +119,10 @@ height: 20px;
 .data-list-numbers li{
     display: inline-block;
 }
+
+.modal-dialog.small{
+    width:500px;
+}
+.modal-dialog.wide{
+    width:900px;
+}

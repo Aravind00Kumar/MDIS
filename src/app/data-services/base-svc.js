@@ -82,6 +82,45 @@
                 get: get
             }
         }])
+        .factory('data.districtService', ['$q', 'dtos', 'data.baseService', function ($q, dtos, base) {
+
+            var url = "districts.json";
+
+            function get(sector) {
+                var defer = $q.defer();
+                base.get(url, sector).then(function (result) {
+                    var data = _.sortBy(_.map(result.data, function (item) { return new dtos.Record(item.id, item.name) }), 'name');
+                    defer.resolve(data);
+                }, function (error) {
+                    defer.reject(error);
+                });
+                return defer.promise;
+            }
+
+            return {
+                get: get
+            }
+        }])
+        .factory('dashboardService', [function () {
+
+            var selectedItems ;
+
+            function get(type) {
+                return selectedItems[type].slice();
+            }
+
+            function set(type, values) {
+                selectedItems[type] =  _.filter(values, function(item){ return item.isSelected === true; });;
+            }
+
+            return {
+                get: get,
+                set: set
+            }
+        }])
+
+
+
 
 })();
 

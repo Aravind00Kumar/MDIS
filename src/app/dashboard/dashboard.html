@@ -70,14 +70,14 @@
 
             <div class="row">
                 <div class="col-md-2 data-section">
-                    <app-list paging-type="string" data-source="dashBoardCtrl.sectors" title="Sector" ></app-list>
+                    <app-list paging-type="string" data-source="dashBoardCtrl.sectors" title="Sector"></app-list>
                 </div>
                 <div class="col-md-2 data-section">
                     <app-list paging-type="string" data-source="dashBoardCtrl.bookNames" title="Book Name"></app-list>
                 </div>
 
                 <div class="col-md-2 data-section">
-                   <app-list paging-type="string" data-source="dashBoardCtrl.years" type="num" title="Year"></app-list>
+                    <app-list paging-type="string" data-source="dashBoardCtrl.years" type="num" title="Year"></app-list>
                 </div>
                 <div class="col-md-3 data-section">
                     <app-list paging-type="string" data-source="dashBoardCtrl.contents" title="Contents"></app-list>
@@ -89,4 +89,7 @@
             </div>
         </div>
     </div>
+
+    <app-popup source="dashBoardCtrl.modelSource" title="dashBoardCtrl.modelTitle"></app-popup>
+
 </div>
