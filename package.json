@@ -1,0 +1,19 @@
+{
+  "name": "mdis",
+  "version": "1.0.0",
+  "description": "mdis",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aravind00Kumar/MDIS.git"
+  },
+  "author": "Aravind Kumar P",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aravind00Kumar/MDIS/issues"
+  },
+  "homepage": "https://github.com/Aravind00Kumar/MDIS#readme"
+}
