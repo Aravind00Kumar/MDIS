@@ -1,0 +1,38 @@
+[
+    {
+        "id": "1",
+        "name": "Total Population"
+    },
+    {
+        "id": "2",
+        "name": "Male & Female Population"
+    },
+    {
+        "id": "3",
+        "name": "Rainfall Data"
+    },
+    {
+        "id": "4",
+        "name": "Urban Population"
+    },
+    {
+        "id": "5",
+        "name": "Hospitals mandal wise "
+    },
+    {
+        "id": "6",
+        "name": "sc st households"
+    },
+    {
+        "id": "7",
+        "name": "Urban population"
+    },
+    {
+        "id": "8",
+        "name": "Mandal wise SHGs"
+    },
+    {
+        "id": "9",
+        "name": "Madal wise women welfares"
+    }
+]

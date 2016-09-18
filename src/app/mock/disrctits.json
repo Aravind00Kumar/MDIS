@@ -1,0 +1,50 @@
+[
+    {
+        "id": "1",
+        "name": "Medak"
+    },
+    {
+        "id": "2",
+        "name": "Rangareddy"
+    },
+    {
+        "id": "3",
+        "name": "Srikakulam"
+    },
+    {
+        "id": "4",
+        "name": "VijayaNagaram"
+    },
+    {
+        "id": "5",
+        "name": "Vizag"
+    },
+    {
+        "id": "6",
+        "name": "Krishna"
+    },
+    {
+        "id": "7",
+        "name": "Guntur"
+    },
+    {
+        "id": "8",
+        "name": "Prakasham"
+    },
+    {
+        "id": "9",
+        "name": "Nellur"
+    },
+    {
+        "id": "10",
+        "name": "Chithur"
+    },
+    {
+        "id": "11",
+        "name": "East Godavari"
+    },
+    {
+        "id": "12",
+        "name": "West Godavari"
+    }
+]

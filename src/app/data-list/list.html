@@ -31,7 +31,7 @@
     </div>
     <div class="dashboard-data-list">
         <ul ng-class="{'data-list-numbers': listCtrl.type === 'num'}">
-            <li ng-repeat="item in listCtrl.source track by $index">
+            <li ng-repeat="item in listCtrl.source track by $index" ng-style="{'padding': listCtrl.type === 'num' ? '2px 10px' : '2px'}">
                 <i ng-if="listCtrl.type !== 'num' " class="fa fa-info-circle"></i>
                 <input type="checkbox" ng-model="item.isSelected" /> {{item.name}}
             </li>

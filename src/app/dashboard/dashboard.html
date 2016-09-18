@@ -56,7 +56,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="btn-group" role="group" aria-label="...">
-                                <button type="button" class="btn btn-primary active">District</button>
+                                <button type="button" class="btn btn-primary" ng-click="dashBoardCtrl.openPopup('districts')" data-toggle="modal" data-target="#myModal">District</button>
                                 <button type="button" class="btn btn-primary">Mandal</button>
                             </div>
                         </div>
@@ -70,7 +70,7 @@
 
             <div class="row">
                 <div class="col-md-2 data-section">
-                    <app-list paging-type="string" data-source="dashBoardCtrl.sectors" title="Sector"></app-list>
+                    <app-list paging-type="string" data-source="dashBoardCtrl.sectors" title="Sector" ></app-list>
                 </div>
                 <div class="col-md-2 data-section">
                     <app-list paging-type="string" data-source="dashBoardCtrl.bookNames" title="Book Name"></app-list>

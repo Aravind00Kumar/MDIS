@@ -9,14 +9,15 @@
                 bindToController: {
                     type: '@?',
                     source: '=?',
-                    title: '@?'
+                    title: '@?',
                 },
                 scope: true,
-                controller: [function () {
+                controller: ['$scope', function ($scope) {
                     var vm = this;
                     this.query = '';
-                    vm.sortOrder = 'fa-sort-alpha-asc';
-                    vm.selectAll = 'fa-square-o'
+                    this.sortOrder = 'fa-sort-alpha-asc';
+                    this.selectAll = 'fa-square-o'
+
                     function init(vm) {
                         vm.alPhaPaging = ['A', ' B', ' C', ' D', ' E', ' F', ' G', ' H', ' I', ' J', ' K', ' L', ' M', 'N', ' O', ' P', ' Q', ' R', ' S', ' T', ' U', ' V', ' W', ' X', ' Y', ' Z']
                         vm.numbers = [5, 10, 15, 20, 25];
@@ -26,6 +27,15 @@
 
                     function activate(vm) {
                         init(vm);
+                        $scope.$watch(
+                            function watchFoo(scope) {
+                                return (vm.source);
+                            },
+                            function handleFooChange(newValue, oldValue) {
+                                if (vm.mainSource.length === 0 && vm.source.length !== 0)
+                                    vm.mainSource = vm.source.slice();
+                            }
+                        );
                     }
 
                     this.toggleSelection = function (toggle) {

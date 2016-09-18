@@ -1,0 +1,46 @@
+[
+    {
+        "id": "1",
+        "name": "Population"
+    },
+    {
+        "id": "2",
+        "name": "Medical & Public Health"
+    },
+    {
+        "id": "3",
+        "name": "Climate"
+    },
+    {
+        "id": "4",
+        "name": "Agriculture"
+    },
+    {
+        "id": "5",
+        "name": "Irrigation"
+    },
+    {
+        "id": "6",
+        "name": "Live Stock"
+    },
+    {
+        "id": "7",
+        "name": "Veterinary Services"
+    },
+    {
+        "id": "8",
+        "name": "Fisheries"
+    },
+    {
+        "id": "9",
+        "name": "Industries"
+    },
+    {
+        "id": "10",
+        "name": "Minning"
+    },
+    {
+        "id": "11",
+        "name": "Fuel & Power"
+    }
+]

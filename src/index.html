@@ -9,9 +9,8 @@
 
 <body>
     <!--<div class="container-fluid">-->
-        <ui-view></ui-view>
-    <!--</div>-->
-
+    <ui-view></ui-view>
+    <app-popup></app-popup>
 
     <script src="./libs/jquery/dist/jquery.js"></script>
     <script src="./libs/underscore/underscore.js"></script>
@@ -22,8 +21,12 @@
 
 
     <script src="./app/app.js"></script>
-    <script src="./app/dashboard/dashboard-ctrl.js"></script>
+    <script src="./app/dtos/models.js"></script>
+    <script src="./app/data-services/base-svc.js"></script>
     <script src="./app/data-list/list-dir.js"></script>
+    <script src="./app/popup/popup-dir.js"></script>
+
+    <script src="./app/dashboard/dashboard-ctrl.js"></script>
 
 
 </body>
